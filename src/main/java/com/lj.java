@@ -11,8 +11,10 @@ public class lj implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("name")
 	private java.lang.String name;
 
-	@org.kie.api.definition.type.Label(value = "age")
+	@org.kie.api.definition.type.Label("age")
 	private java.lang.Integer age;
+
+	private java.lang.Character goal;
 
 	public lj() {
 	}
@@ -33,9 +35,19 @@ public class lj implements java.io.Serializable {
 		this.age = age;
 	}
 
-	public lj(java.lang.String name, java.lang.Integer age) {
+	public java.lang.Character getGoal() {
+		return this.goal;
+	}
+
+	public void setGoal(java.lang.Character goal) {
+		this.goal = goal;
+	}
+
+	public lj(java.lang.String name, java.lang.Integer age,
+			java.lang.Character goal) {
 		this.name = name;
 		this.age = age;
+		this.goal = goal;
 	}
 
 }
