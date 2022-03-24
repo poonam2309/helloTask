@@ -8,8 +8,11 @@ public class lj implements java.io.Serializable {
 
 	static final long serialVersionUID = 1L;
 
-	@org.kie.api.definition.type.Label(value = "name")
+	@org.kie.api.definition.type.Label("name")
 	private java.lang.String name;
+
+	@org.kie.api.definition.type.Label(value = "age")
+	private java.lang.Integer age;
 
 	public lj() {
 	}
@@ -22,8 +25,17 @@ public class lj implements java.io.Serializable {
 		this.name = name;
 	}
 
-	public lj(java.lang.String name) {
+	public java.lang.Integer getAge() {
+		return this.age;
+	}
+
+	public void setAge(java.lang.Integer age) {
+		this.age = age;
+	}
+
+	public lj(java.lang.String name, java.lang.Integer age) {
 		this.name = name;
+		this.age = age;
 	}
 
 }
